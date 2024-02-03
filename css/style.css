@@ -7,13 +7,7 @@ body * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-@font-face {
-  font-family: "Compacta";
-  src: url("../fonts/compacta-std.otf");
-}
-.test__wrapper * {
-  font-family: "Roboto", sans-serif;
-}
+
 .test__wrapper .main__test {
   margin: 50px 3.75rem;
   border: 8px solid #fedd00 !important;
@@ -113,7 +107,6 @@ body * {
 }
 .test__wrapper .main__test .desc > h1 {
   margin-top: 0px;
-  font-family: "Compacta", sans-serif;
   font-weight: 400;
   font-size: 72px;
   line-height: 61px;
