@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style2.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="test__wrapper">
+		<div class="main__test">
+			<div class="inner">
+				<div class="desc">
+					<h1>let's find your style!</h1>
+					<p>Take this short quiz and get your personalized product recommendations.</p>
+					<div class="btn">
+						<button><span>Let's Go</span></button>
+					</div>
+				</div>
+				<div class="media">
+					<img src="https://cdn.shopify.com/s/files/1/1089/2102/files/quiz_home_1_775b2a22-9b6d-42c3-8891-0b24f813a70c.jpg?v=1706955806" alt="quiz">
+				</div>
+			</div>
+		</div>
+		<div class="form__wrapper" style="display:none;">
+			<form action="">
+				<div class="progress">
+					<div class="active"></div>
+				</div>
+				<div class="steps__wrapper">
+
+					<div class="step current" data-progress='0%'>
+						<h6>Let’s get on a first name basis, what should we call you?</h6>
+						<div class="step__picker">
+							<div class="controls__bottom not__animated animated">
+								<input type="text" placeholder="Enter first name">
+								<button type="button">NEXT</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="step current" style="display:none;" data-progress='8%'>
+						<h6>You're here, and that's cosmic! What's your zodiac sign? Enter your birthday.</h6>
+						<div class="step__picker">
+							<div class="controls__bottom not__animated animated">
+								<input type="text" id="DtYrDatepicker">
+								<button type="submit">NEXT</button>
+							</div>
+						</div>
+					</div>
+					
+
+					<div class="step" style="display:none;" data-progress='17%'>
+						<h6>Which colors do you find yourself reaching for?[select all that apply]</h6>
+						<div class="step__picker">
+							<input type="hidden">
+							<div class="checkbox">
+								<span></span><p>Brown</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Black</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Red</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Purple</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Neutrals</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>White</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Green</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Blue</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Orange</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Pink</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Grey</p>
+							</div>
+							<button type="button">NEXT</button>
+						</div>
+					</div>
+
+					<div class="step" style="display:none;" data-progress='25%'>
+						<h6>What’s your typical choice of movement?</h6>
+						<div class="step__picker">
+							<input type="hidden">
+							<a href="#">
+								<span></span><p>Running</p>
+							</a>
+							<a href="#">
+								<span></span><p>Pilates</p>
+							</a>
+							<a href="#">
+								<span></span><p>Yoga</p>
+							</a>
+							<a href="#">
+								<span></span><p>Barre</p>
+							</a>
+							<a href="#">
+								<span></span><p>HIIT</p>
+							</a>
+							<a href="#">
+								<span></span><p>Strength Training </p>
+							</a>
+							<a href="#">
+								<span></span><p>Kickboxing/boxing</p>
+							</a>
+							<a href="#">
+								<span></span><p>Tennis/pickleball</p>
+							</a>
+							<a href="#">
+								<span></span><p>Hiking</p>
+							</a>
+							<a href="#">
+								<span></span><p>Dance/Cheer</p>
+							</a>
+							<a href="#">
+								<span></span><p>I don’t really work out </p>
+							</a>
+						</div>
+					</div>
+
+					
+
+					<div class="step" style="display:none;" data-progress='33%'>
+						<h6>Let’s talk bra priorities…</h6>
+						<div class="step__picker">
+							<input type="hidden">
+							<a href="#">
+								<span></span><p>Cute + flirty</p>
+							</a>
+							<a href="#">
+								<span></span><p>High impact (needs to hold these girls in!)</p>
+							</a>
+							<a href="#">
+								<span></span><p>Unsure</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="step" style="display:none;" data-progress='42%'>
+						<h6>Let’s talk wardrobe problems, check all that apply</h6>
+						<div class="step__picker">
+							<input type="hidden">
+							<div class="checkbox">
+								<span></span><p>I always have camel-toe</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>I hate bra pads</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>I can’t squat without showing everyone my underwear</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>Everything is too SHORT!</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>My boobs spill out of everything</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>I don’t have anywhere to put things (I NEED pockets!)</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>I hate cropped things</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p>So uncomfy, I feel like i’m wearing armor</p>
+							</div>
+							<button type="button">NEXT</button>
+						</div>
+					</div>
+
+					<div class="step" style="display:none;" data-progress='52%'>
+						<h6>Design Battle: Favorite neckline</h6>
+						<div class="step__picker">
+							<input type="hidden">
+							<a href="#">
+								<span></span><p>Square</p>
+							</a>
+							<a href="#">
+								<span></span><p>Scoop</p>
+							</a>
+							<a href="#">
+								<span></span><p>V</p>
+							</a>
+							<a href="#">
+								<span></span><p>Crew</p>
+							</a>
+							<a href="#">
+								<span></span><p>Mock</p>
+							</a>
+							<a href="#">
+								<span></span><p>Sweetheart</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="step" style="display:none;" data-progress='61%'>
+						<h6>Design Battle: My style is…</h6>
+						<div class="step__picker">
+							<input type="hidden">
+							<a href="#">
+								<span></span><p>Feminine + Romantic (I love bows)</p>
+							</a>
+							<a href="#">
+								<span></span><p>Sporty (no bows!)</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="step" style="display:none;" data-progress='70%'>
+						<h6>Design Battle: Pick your skort:</h6>
+						<div class="step__picker">
+							<input type="hidden">
+							<a href="#">
+								<span></span><p>Upper thigh (short + flirty)</p>
+							</a>
+							<a href="#">
+								<span></span><p>Mid thigh (modest + more coverage)</p>
+							</a>
+						</div>
+					</div>
+
+
+					<div class="step" style="display:none;" data-progress='79%'>
+						<h6>How tall are you?</h6>
+						<div class="step__picker">
+							<select>
+								<option value="5"> <5’ </option>
+								<option value="5.3">5’1 - 5’3</option>
+								<option value="5.7">5’4 - 5’7</option>
+								<option value="5.11">5’8 - 5’11</option>
+								<option value="6">6’></option>
+							</select>
+							<button type="button">NEXT</button>
+						</div>
+					</div>
+					
+					<div class="step" style="display:none;" data-progress='88%'>
+						<h6> Based on our size chart, what is your top size?</h6>
+						<div class="step__picker">
+							<select>
+								<option value="XXS">XXS</option>
+								<option value="XS">XS</option>
+								<option value="S">S</option>
+								<option value="M">M</option>
+								<option value="L">L</option>
+								<option value="XL">XL</option>
+								<option value="1X">1X</option>
+								<option value="2X">2X</option>
+								<option value="3X">3X</option>
+							</select>
+							<button type="button">NEXT</button>
+						</div>
+					</div>
+
+					<div class="step" style="display:none;" data-progress='95%'>
+						<h6> Based on our size chart, what is your bottom size?</h6>
+						<div class="step__picker">
+							<select>
+								<option value="XXS">XXS</option>
+								<option value="XS">XS</option>
+								<option value="S">S</option>
+								<option value="M">M</option>
+								<option value="L">L</option>
+								<option value="XL">XL</option>
+								<option value="1X">1X</option>
+								<option value="2X">2X</option>
+								<option value="3X">3X</option>
+							</select>
+							<button type="button">NEXT</button>
+						</div>
+					</div>
+
+					<div class="step" style="display:none;" data-progress='100%'>
+						<div class="final">
+							<span><svg width="29px" height="20px" viewBox="0 0 29 20" version="1.1" data-aos="fade-left" class="aos-init aos-animate"><title>Mail icon</title><g id="Question-types" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Newsletter" transform="translate(-706.000000, -352.000000)" fill="#1A1A1A" fill-rule="nonzero"><g id="noun_Email_2494939" transform="translate(706.000000, 352.000000)"><path d="M2.61180124,0 L26.3881988,0 C27.8291925,0 29,1.18721461 29,2.64840183 L29,17.4429224 C29,18.8127854 27.8291925,20 26.3881988,20 L2.61180124,20 C1.17080745,20 0,18.8127854 0,17.4429224 L0,2.64840183 C0,1.18721461 1.17080745,0 2.61180124,0 Z M27.2888199,17.8995434 L18.3726708,10.2283105 L16.5714286,11.5068493 C15.310559,12.4200913 13.689441,12.4200913 12.5186335,11.5068493 L10.6273292,10.2283105 L1.71118012,17.8995434 C1.89130435,18.2648402 2.2515528,18.4474886 2.61180124,18.4474886 L26.3881988,18.4474886 C26.8385093,18.4474886 27.1086957,18.2648402 27.2888199,17.8995434 Z M19.6335404,9.22374429 L27.4689441,15.9817352 L27.4689441,3.47031963 L19.6335404,9.22374429 Z M1.5310559,15.9817352 L9.36645963,9.22374429 L1.5310559,3.47031963 L1.5310559,15.9817352 Z M1.98136646,1.82648402 L13.4192547,10.2283105 C14.0496894,10.7762557 14.9503106,10.7762557 15.6708075,10.2283105 L27.1086957,1.82648402 C26.9285714,1.64383562 26.6583851,1.55251142 26.3881988,1.55251142 L2.61180124,1.55251142 C2.34161491,1.55251142 2.07142857,1.64383562 1.98136646,1.82648402 Z" id="Shape"></path></g></g></g></svg></span>
+							<p>(if you already have an account, make
+								sure it matches up with your email linked to your account!):</p>
+							<h6>Let’s save your results! Enter your email</h6>
+							<div class="controls__bottom">
+								<input type="text" placeholder="Enter email address">
+								<button type="submit">SUBMIT AND SEE RESULTS</button>
+								<a href="#">No Thanks</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="controls">
+					<a href="#" class="back" style="display:none;"><svg width="12px" height="10px" viewBox="0 0 14 12" version="1.1"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Next/Back-Buttons" transform="translate(0.000000, -54.000000)" fill="#000000" fill-rule="nonzero" stroke="#000000"><g id="Group" transform="translate(0.000000, 50.000000)"><path d="M7.02814142,4 C7.10303865,4.00628851 7.17617741,4.03773106 7.2334898,4.09432766 L11.9032854,8.70580175 C12.0322382,8.83314409 12.0322382,9.03960679 11.9032854,9.16694917 C11.7743325,9.29429148 11.5652587,9.29429148 11.4363058,9.16694917 L7.33008912,5.11198996 L7.33104051,16.4516973 L7.32572085,16.5103293 C7.29776369,16.6624347 7.1629516,16.7777778 7.00085901,16.7777778 C6.81848843,16.7777778 6.67064429,16.6317903 6.67063168,16.4516973 L6.6696803,5.11198996 L2.56369419,9.16694917 C2.44906944,9.28014233 2.27113919,9.29271938 2.14244655,9.2046802 L2.09671464,9.16694917 C1.96776179,9.03960679 1.96776179,8.83314409 2.09671464,8.70580175 L6.76651023,4.09432766 C6.82382262,4.03773106 6.89696138,4.00628851 6.97185861,4 L7.02814142,4 Z" id="Path" transform="translate(7.000000, 10.388889) rotate(-90.000000) translate(-7.000000, -10.388889) "></path></g></g></g></svg> BACK</a>
+
+					<a href="#" class="next"> NEXT <svg width="12px" height="10px" viewBox="0 0 14 12" version="1.1"><title>Next</title><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Next/Back-Buttons" transform="translate(-263.000000, -54.000000)" fill="#000000" fill-rule="nonzero" stroke="#000000"><g id="Group-3-Copy" transform="translate(0.000000, 50.000000)"><g id="Group-2" transform="translate(214.000000, 0.000000)"><path d="M56.0281414,4 C56.1030387,4.00628851 56.1761774,4.03773106 56.2334898,4.09432766 L60.9032854,8.70580175 C61.0322382,8.83314409 61.0322382,9.03960679 60.9032854,9.16694917 C60.7743325,9.29429148 60.5652587,9.29429148 60.4363058,9.16694917 L56.3300891,5.11198996 L56.3310405,16.4516973 L56.3257208,16.5103293 C56.2977637,16.6624347 56.1629516,16.7777778 56.000859,16.7777778 C55.8184884,16.7777778 55.6706443,16.6317903 55.6706317,16.4516973 L55.6696803,5.11198996 L51.5636942,9.16694917 C51.4490694,9.28014233 51.2711392,9.29271938 51.1424466,9.2046802 L51.0967146,9.16694917 C50.9677618,9.03960679 50.9677618,8.83314409 51.0967146,8.70580175 L55.7665102,4.09432766 C55.8238226,4.03773106 55.8969614,4.00628851 55.9718586,4 L56.0281414,4 Z" id="Path-Copy" transform="translate(56.000000, 10.388889) rotate(-270.000000) translate(-56.000000, -10.388889) "></path></g></g></g></g></svg></a>
+				</div>
+			</form>
+		</div>
+		<div class="recommended__wrapper" style="display:none;">
+			<h6>Recommended products</h6>
+			<form action="">
+				<div class="grid">
+					<div class="elem">
+						<a href="#" class="media">
+							<img src="img/image1.webp" alt="image">
+						</a>
+						<div class="desc">
+							<p>Animal Cuts</p>
+							<span>$45.95</span>
+						</div>
+						<div class="controls">
+							<button type="submit">ADD TO CART</button>
+						</div>
+					</div>
+					<div class="elem">
+						<a href="#" class="media">
+							<img src="img/image2.webp" alt="image">
+						</a>
+						<div class="desc">
+							<p>Animal TNT+</p>
+							<span>$69.95</span>
+						</div>
+						<div class="controls">
+							<button type="submit">ADD TO CART</button>
+						</div>
+					</div>
+					<div class="elem">
+						<a href="#" class="media">
+							<img src="img/image3.webp" alt="image">
+						</a>
+						<div class="desc">
+							<p>Animal Pak</p>
+							<span>$33.95</span>
+						</div>
+						<div class="controls">
+							<div class="group">
+								<p>Serving Size</p>
+								<select name="" id="">
+									<option value="">30 packs</option>
+									<option value="">60 packs</option>
+								</select>
+							</div>
+							<button type="submit">ADD TO CART</button>
+						</div>
+					</div>
+					<div class="elem">
+						<a href="#" class="media">
+							<img src="img/image3.webp" alt="image">
+						</a>
+						<div class="desc">
+							<p>Primal Preworkout</p>
+							<span>$43.95</span>
+						</div>
+						<div class="controls">
+							<div class="group">
+								<p>Flavor Size</p>
+								<select name="" id="">
+									<option value="">30 packs</option>
+									<option value="">60 packs</option>
+								</select>
+							</div>
+							<button type="submit">ADD TO CART</button>
+						</div>
+					</div>
+				</div>
+				<div class="retake">
+					<a href="#">RETAKE QUIZ</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+$( "#DtYrDatepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+	  yearRange: '-100:+0'
+});
+	</script>
+</body>
+</html>
