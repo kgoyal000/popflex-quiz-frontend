@@ -37,7 +37,7 @@
 						<h6>Let’s get on a first name basis, what should we call you?</h6>
 						<div class="step__picker">
 							<div class="controls__bottom not__animated animated">
-								<input type="text" placeholder="Enter first name">
+								<input type="text" id="quiz_name" placeholder="Enter first name">
 								<button type="button">NEXT</button>
 							</div>
 						</div>
@@ -56,7 +56,7 @@
 
 					<div class="step" style="display:none;" data-progress='17%'>
 						<h6>Which colors do you find yourself reaching for?[select all that apply]</h6>
-						<div class="step__picker">
+						<div class="step__picker color_step">
 							<input type="hidden">
 							<div class="checkbox">
 								<span></span><p>Brown</p>
@@ -97,40 +97,40 @@
 
 					<div class="step" style="display:none;" data-progress='25%'>
 						<h6>What’s your typical choice of movement?</h6>
-						<div class="step__picker">
+						<div class="step__picker moment_step">
 							<input type="hidden">
 							<a href="#">
-								<span></span><p>Running</p>
+								<span></span><p data-tag="hiimpact">Running</p>
 							</a>
 							<a href="#">
-								<span></span><p>Pilates</p>
+								<span></span><p data-tag="yogapilates">Pilates</p>
 							</a>
 							<a href="#">
-								<span></span><p>Yoga</p>
+								<span></span><p data-tag="yogapilates">Yoga</p>
 							</a>
 							<a href="#">
-								<span></span><p>Barre</p>
+								<span></span><p data-tag="barre">Barre</p>
 							</a>
 							<a href="#">
-								<span></span><p>HIIT</p>
+								<span></span><p data-tag="hiimpact">HIIT</p>
 							</a>
 							<a href="#">
-								<span></span><p>Strength Training </p>
+								<span></span><p data-tag="strength">Strength Training </p>
 							</a>
 							<a href="#">
-								<span></span><p>Kickboxing/boxing</p>
+								<span></span><p data-tag="hiimpact">Kickboxing/boxing</p>
 							</a>
 							<a href="#">
-								<span></span><p>Tennis/pickleball</p>
+								<span></span><p data-tag="tennis">Tennis/pickleball</p>
 							</a>
 							<a href="#">
-								<span></span><p>Hiking</p>
+								<span></span><p data-tag="hiking">Hiking</p>
 							</a>
 							<a href="#">
-								<span></span><p>Dance/Cheer</p>
+								<span></span><p data-tag="dance">Dance/Cheer</p>
 							</a>
 							<a href="#">
-								<span></span><p>I don’t really work out </p>
+								<span></span><p data-tag="none">I don’t really work out </p>
 							</a>
 						</div>
 					</div>
@@ -139,47 +139,50 @@
 
 					<div class="step" style="display:none;" data-progress='33%'>
 						<h6>Let’s talk bra priorities…</h6>
-						<div class="step__picker">
+						<div class="step__picker bra_step">
 							<input type="hidden">
 							<a href="#">
-								<span></span><p>Cute + flirty</p>
+								<span></span><p data-tag="feminine">Cute + flirty</p>
 							</a>
 							<a href="#">
-								<span></span><p>High impact (needs to hold these girls in!)</p>
+								<span></span><p data-tag="hiimpact">High impact (needs to hold these girls in!)</p>
 							</a>
 							<a href="#">
-								<span></span><p>Unsure</p>
+								<span></span><p data-tag="">Unsure</p>
 							</a>
 						</div>
 					</div>
 
 					<div class="step" style="display:none;" data-progress='42%'>
 						<h6>Let’s talk wardrobe problems, check all that apply</h6>
-						<div class="step__picker">
+						<div class="step__picker wardrobe_step">
 							<input type="hidden">
 							<div class="checkbox">
-								<span></span><p>I always have camel-toe</p>
+								<span></span><p data-tag="ant,camel,toe">I always have camel-toe</p>
 							</div>
 							<div class="checkbox">
-								<span></span><p>I hate bra pads</p>
+								<span></span><p data-tag="Nipple,cushion,layer">I hate bra pads</p>
 							</div>
 							<div class="checkbox">
-								<span></span><p>I can’t squat without showing everyone my underwear</p>
+								<span></span><p data-tag="Squat,proof">I can’t squat without showing everyone my underwear</p>
 							</div>
 							<div class="checkbox">
-								<span></span><p>Everything is too SHORT!</p>
+								<span></span><p data-tag="chaf">My thighs chaf</p>
 							</div>
 							<div class="checkbox">
-								<span></span><p>My boobs spill out of everything</p>
+								<span></span><p data-tag="exclude booty shorts,exclude low-rise shorts">Everything is too SHORT!</p>
 							</div>
 							<div class="checkbox">
-								<span></span><p>I don’t have anywhere to put things (I NEED pockets!)</p>
+								<span></span><p data-tag="hiimpact">My boobs spill out of everything</p>
 							</div>
 							<div class="checkbox">
-								<span></span><p>I hate cropped things</p>
+								<span></span><p data-tag="pockets">I don’t have anywhere to put things (I NEED pockets!)</p>
 							</div>
 							<div class="checkbox">
-								<span></span><p>So uncomfy, I feel like i’m wearing armor</p>
+								<span></span><p data-tag="exclude crop top">I hate cropped things</p>
+							</div>
+							<div class="checkbox">
+								<span></span><p data-tag="include seamless">So uncomfy, I feel like i’m wearing armor</p>
 							</div>
 							<button type="button">NEXT</button>
 						</div>
@@ -187,51 +190,51 @@
 
 					<div class="step" style="display:none;" data-progress='52%'>
 						<h6>Design Battle: Favorite neckline</h6>
-						<div class="step__picker">
+						<div class="step__picker neckline_step">
 							<input type="hidden">
 							<a href="#">
-								<span></span><p>Square</p>
+								<span></span><p data-tag="square">Square</p>
 							</a>
 							<a href="#">
-								<span></span><p>Scoop</p>
+								<span></span><p data-tag="scoop">Scoop</p>
 							</a>
 							<a href="#">
-								<span></span><p>V</p>
+								<span></span><p data-tag="v">V</p>
 							</a>
 							<a href="#">
-								<span></span><p>Crew</p>
+								<span></span><p data-tag="crew">Crew</p>
 							</a>
 							<a href="#">
-								<span></span><p>Mock</p>
+								<span></span><p data-tag="mock">Mock</p>
 							</a>
 							<a href="#">
-								<span></span><p>Sweetheart</p>
+								<span></span><p data-tag="sweet">Sweetheart</p>
 							</a>
 						</div>
 					</div>
 
 					<div class="step" style="display:none;" data-progress='61%'>
 						<h6>Design Battle: My style is…</h6>
-						<div class="step__picker">
+						<div class="step__picker style_step">
 							<input type="hidden">
 							<a href="#">
-								<span></span><p>Feminine + Romantic (I love bows)</p>
+								<span></span><p data-tag="feminine">Feminine + Romantic (I love bows)</p>
 							</a>
 							<a href="#">
-								<span></span><p>Sporty (no bows!)</p>
+								<span></span><p data-tag="utility">Sporty (no bows!)</p>
 							</a>
 						</div>
 					</div>
 
 					<div class="step" style="display:none;" data-progress='70%'>
 						<h6>Design Battle: Pick your skort:</h6>
-						<div class="step__picker">
+						<div class="step__picker coverage_step">
 							<input type="hidden">
 							<a href="#">
-								<span></span><p>Upper thigh (short + flirty)</p>
+								<span></span><p data-tag="flirty">Upper thigh (short + flirty)</p>
 							</a>
 							<a href="#">
-								<span></span><p>Mid thigh (modest + more coverage)</p>
+								<span></span><p data-tag="modest">Mid thigh (modest + more coverage)</p>
 							</a>
 						</div>
 					</div>
@@ -240,7 +243,7 @@
 					<div class="step" style="display:none;" data-progress='79%'>
 						<h6>How tall are you?</h6>
 						<div class="step__picker">
-							<select>
+							<select id="how_tall">
 								<option value="5"> <5’ </option>
 								<option value="5.3">5’1 - 5’3</option>
 								<option value="5.7">5’4 - 5’7</option>
@@ -254,7 +257,7 @@
 					<div class="step" style="display:none;" data-progress='88%'>
 						<h6> Based on our size chart, what is your top size?</h6>
 						<div class="step__picker">
-							<select>
+							<select id="top_size">
 								<option value="XXS">XXS</option>
 								<option value="XS">XS</option>
 								<option value="S">S</option>
@@ -272,7 +275,7 @@
 					<div class="step" style="display:none;" data-progress='95%'>
 						<h6> Based on our size chart, what is your bottom size?</h6>
 						<div class="step__picker">
-							<select>
+							<select id="bottom_size">
 								<option value="XXS">XXS</option>
 								<option value="XS">XS</option>
 								<option value="S">S</option>
@@ -283,7 +286,7 @@
 								<option value="2X">2X</option>
 								<option value="3X">3X</option>
 							</select>
-							<button type="button">NEXT</button>
+							<button type="button" onclick="onSubmitQuiz()">NEXT</button>
 						</div>
 					</div>
 
@@ -294,8 +297,8 @@
 								sure it matches up with your email linked to your account!):</p>
 							<h6>Let’s save your results! Enter your email</h6>
 							<div class="controls__bottom">
-								<input type="text" placeholder="Enter email address">
-								<button type="submit">SUBMIT AND SEE RESULTS</button>
+								<input id="quiz_email" type="text" placeholder="Enter email address">
+								<button type="button" onclick="submitEmail()">SUBMIT AND SEE RESULTS</button>
 								<a href="#">No Thanks</a>
 							</div>
 						</div>
@@ -346,7 +349,7 @@
 						</div>
 						<div class="controls">
 							<div class="group">
-								<p>Serving Size</p>
+								<p>Select Size</p>
 								<select name="" id="">
 									<option value="">30 packs</option>
 									<option value="">60 packs</option>
@@ -376,11 +379,16 @@
 					</div>
 				</div>
 				<div class="retake">
-					<a href="#">RETAKE QUIZ</a>
+					<button type="button" style="width: 50%; max-width: 350px;" id="showMore"><span>Show More</span></button>
+
+					<!-- <a href="#">RETAKE QUIZ</a> -->
 				</div>
 			</form>
 		</div>
 	</div>
+
+	<input type="hidden" id="uuid_quiz" />
+
 	<script
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -388,11 +396,242 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="js/script.js"></script>
 	<script>
+$('.step__picker button').each((index, element) => {
+    $(element).attr('disabled', true);
+});
+
+
+$('#how_tall, #top_size, #bottom_size').each((index, element) => {
+	$(element).parent().find('button').prop('disabled', false)
+});
+
+$('#quiz_name, #DtYrDatepicker').on('change', function(){
+	if($(this).val() != ''){
+		$(this).parent().find('button').prop('disabled', false)
+	}else{
+		$(this).parent().find('button').prop('disabled', true)
+	}
+})
+
+$('.color_step, .wardrobe_step').on('click', function(){
+	if($(this).closest('.step__picker').find('.active').length > 0){
+		$(this).closest('.step__picker').find('button').prop('disabled', false)
+	}else{
+		$(this).closest('.step__picker').find('button').prop('disabled', true)
+	}
+})
+
 $( "#DtYrDatepicker" ).datepicker({
       changeMonth: true,
       changeYear: true,
 	  yearRange: '-100:+0'
 });
+
+var Shopify = Shopify || {};
+// ---------------------------------------------------------------------------
+// Money format handler
+// ---------------------------------------------------------------------------
+Shopify.money_format = "${{amount}}";
+Shopify.formatMoney = function(cents, format) {
+  if (typeof cents == 'string') { cents = cents.replace('.',''); }
+  var value = '';
+  var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+  var formatString = (format || this.money_format);
+
+  function defaultOption(opt, def) {
+     return (typeof opt == 'undefined' ? def : opt);
+  }
+
+  function formatWithDelimiters(number, precision, thousands, decimal) {
+    precision = defaultOption(precision, 2);
+    thousands = defaultOption(thousands, ',');
+    decimal   = defaultOption(decimal, '.');
+
+    if (isNaN(number) || number == null) { return 0; }
+
+    number = (number/100.0).toFixed(precision);
+
+    var parts   = number.split('.'),
+        dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+        cents   = parts[1] ? (decimal + parts[1]) : '';
+
+    return dollars + cents;
+  }
+
+  switch(formatString.match(placeholderRegex)[1]) {
+    case 'amount':
+      value = formatWithDelimiters(cents, 2);
+      break;
+    case 'amount_no_decimals':
+      value = formatWithDelimiters(cents, 0);
+      break;
+    case 'amount_with_comma_separator':
+      value = formatWithDelimiters(cents, 2, '.', ',');
+      break;
+    case 'amount_no_decimals_with_comma_separator':
+      value = formatWithDelimiters(cents, 0, '.', ',');
+      break;
+  }
+
+  return formatString.replace(placeholderRegex, value);
+};
+
+function onSubmitQuiz(){
+	var name = $('#quiz_name').val();
+	var dob = $('#DtYrDatepicker').val();
+	var colors = $('.color_step .active').map(function() {
+		return $(this).find('p').html();
+	}).get().join(', ');
+
+	var moment = $('.moment_step .active [data-tag]').data('tag');
+	var bra = $('.bra_step .active [data-tag]').data('tag')
+	var wardrobe = $('.wardrobe_step .active').map(function() {
+		return $(this).find('[data-tag]').data('tag');
+	}).get().join(', ');
+	var neckline = $('.neckline_step .active [data-tag]').data('tag');
+	var style = $('.style_step .active [data-tag]').data('tag')
+	var coverage = $('.coverage_step .active [data-tag]').data('tag');
+	var tall = $('#how_tall').val();
+	var top_size = $('#top_size').val()
+	var bottom_size = $('#bottom_size').val()
+	var email = $('#quiz_email').val()
+
+	let json_data = {
+		"name": name,
+		"dob": dob,
+		"colors": colors,
+		"quiz_moment": moment,
+		"quiz_bra": bra,
+		"quiz_wardrobe": wardrobe,
+		"quiz_neckline": neckline,
+		"quiz_style": style,
+		"quiz_coverage": coverage,
+		"how_tall": tall,
+		"top_size": top_size,
+		"bottom_size": bottom_size,
+		"email": email
+	}
+
+	$.ajax({
+    url: 'http://127.0.0.1:8000/api/quiz/',  // URL of the Django view
+    type: 'POST',  // Method type
+    contentType: 'application/json',  // Type of data you're sending
+    data: JSON.stringify(json_data),  // Convert the JavaScript object to a JSON string
+    success: function(response) {
+        console.log(response);  // Handle success
+        $('.recommended__wrapper .grid').html('');
+        let innerhtml = '';
+        let maxInitialProducts = 8;  // Max number of products to show initially
+		$('#uuid_quiz').val(response.received_data.id)
+        // Function to build HTML for a product
+        function buildProductHtml(product_data) {
+            let price = 5000000;
+            let options = '';
+            product_data.fields.variants.forEach(variant_data => {
+                let pp = parseFloat(variant_data.fields.price);
+                if (pp < price) price = pp;
+                options += `<option value="${variant_data.pk}">${variant_data.fields.title}</option>`;
+            });
+            return `<div class="elem">
+                        <a target="_blank" href="https://www.popflexactive.com/products/${product_data.fields.handle}" class="media">
+                            <img src="${product_data.fields.image_src}" alt="image">
+                        </a>
+                        <div class="desc">
+                            <p>${product_data.fields.title}</p>
+                            <span>${price < 5000000 ? Shopify.formatMoney(price*100) : ''}</span>
+                        </div>
+                        <div class="controls">
+                            <div class="group">
+                                <p>Select Size</p>
+                                <select name="" id="">
+                                    ${options}
+                                </select>
+                            </div>
+                            <button type="button">ADD TO CART</button>
+                        </div>
+                    </div>`;
+        }
+
+        // Append initial products
+        response.recommended_products.slice(0, maxInitialProducts).forEach(product_data => {
+            innerhtml += buildProductHtml(product_data);
+        });
+
+        $('.recommended__wrapper .grid').html(innerhtml);
+
+        // Show "Show More" button if there are more than 8 products
+        if (response.recommended_products.length > maxInitialProducts) {
+            $('#showMore').show();
+        }
+
+        // "Show More" button click event
+        $('#showMore').on('click', function() {
+            let additionalHtml = '';
+            response.recommended_products.slice(maxInitialProducts).forEach(product_data => {
+                additionalHtml += buildProductHtml(product_data);
+            });
+
+            $('.recommended__wrapper .grid').append(additionalHtml);
+            $(this).hide();  // Hide "Show More" button after displaying all products
+        });
+    },
+    error: function(error) {
+        console.log(error);  // Handle error
+    }
+});
+
+}
+
+function submitEmail(){
+	let uuid = $('#uuid_quiz').val()
+	var email = $('#quiz_email').val()
+	var dob = $('#DtYrDatepicker').val();
+	var colors = $('.color_step .active').map(function() {
+		return $(this).find('p').html();
+	}).get().join(', ');
+
+	var moment = $('.moment_step .active [data-tag]').data('tag');
+	var bra = $('.bra_step .active [data-tag]').data('tag')
+	var wardrobe = $('.wardrobe_step .active').map(function() {
+		return $(this).find('[data-tag]').data('tag');
+	}).get().join(', ');
+	var neckline = $('.neckline_step .active [data-tag]').data('tag');
+	var style = $('.style_step .active [data-tag]').data('tag')
+	var coverage = $('.coverage_step .active [data-tag]').data('tag');
+	var tall = $('#how_tall').val();
+	var top_size = $('#top_size').val()
+	var bottom_size = $('#bottom_size').val()
+	var email = $('#quiz_email').val()
+	
+	let json_data = {
+		"id": uuid,
+		"name": name,
+		"dob": dob,
+		"colors": colors,
+		"quiz_moment": moment,
+		"quiz_bra": bra,
+		"quiz_wardrobe": wardrobe,
+		"quiz_neckline": neckline,
+		"quiz_style": style,
+		"quiz_coverage": coverage,
+		"how_tall": tall,
+		"top_size": top_size,
+		"bottom_size": bottom_size,
+		"email": email
+	}
+	$.ajax({
+		url: 'http://127.0.0.1:8000/api/quiz/email/',  // URL of the Django view
+		type: 'POST',  // Method type
+		contentType: 'application/json',  // Type of data you're sending
+		data: JSON.stringify(json_data),  // Convert the JavaScript object to a JSON string
+		success: function(response) {
+			console.log(response)
+		},
+		error: function(error) {
+			console.log(error);  // Handle error
+		}
+	})
+}
 	</script>
 </body>
 </html>

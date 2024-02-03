@@ -27,7 +27,7 @@ $(document).ready(function(){
 			$anchor.addClass('active');
 		}
 
-		$(this).closest(".step__picker").find("input").val($(this).find("p").text());
+		//$(this).closest(".step__picker").find("input").val($(this).find("p").text());
 		$(this).closest('.step').removeClass('current').css('display' ,"none").next('.step').addClass("current").fadeIn(300);
 		$('.test__wrapper .controls .back').fadeIn(300);
 		$('.form__wrapper .progress>.active').css("width" , $('.form__wrapper .step.current').attr("data-progress"));
